@@ -1,5 +1,5 @@
 {
-  "name": "react-youtube",
+  "name": "pb-react-youtube",
   "version": "7.6.0",
   "description": "react.js powered YouTube player component",
   "main": "dist/YouTube.js",
@@ -60,5 +60,8 @@
     "prepublish": "npm run compile",
     "lint": "eslint src",
     "example": "webpack-dev-server --config example/webpack.config.js"
+  },
+  "publishConfig": {
+    "registry": "https://purplebricks.pkgs.visualstudio.com/_packaging/purplebricks-npm/npm/registry/"
   }
 }
