@@ -278,6 +278,7 @@ class YouTube extends React.Component {
 
     // set queueing options
     let autoplay = false;
+    let playlist = false;
     const opts = {
       videoId: this.props.videoId
     };
@@ -294,7 +295,9 @@ class YouTube extends React.Component {
         opts.playerVars.list = this.props.opts.playerVars.list;
       }
       if ('listType' in this.props.opts.playerVars) {
-        opts.playerVars.listType = this.props.opts.playerVars.listType;
+        const listType = this.props.opts.playerVars.listType;
+        opts.playerVars.listType = listType;
+        playlist = listType === 'playlist';
       }
     }
 
@@ -303,6 +306,12 @@ class YouTube extends React.Component {
       this.internalPlayer.loadVideoById(opts);
       return;
     }
+
+    if (playlist) {
+      const { list } = this.props.opts.playerVars;
+      this.internalPlayer.cuePlaylist(list, 2);
+    }
+
     // default behaviour just cues the video
     this.internalPlayer.cueVideoById(opts);
   };
