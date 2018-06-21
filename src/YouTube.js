@@ -308,8 +308,14 @@ class YouTube extends React.Component {
     }
 
     if (playlist) {
-      const { list } = this.props.opts.playerVars;
-      this.internalPlayer.cuePlaylist(list, 2);
+      const { list, listType } = this.props.opts.playerVars;
+      const playlistArguments = {
+        listType: listType,
+        list: list,
+        index: 2
+      };
+
+      this.internalPlayer.cuePlaylist(playlistArguments);
       return;
     }
 
