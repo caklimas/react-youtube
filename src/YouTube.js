@@ -289,11 +289,11 @@ class YouTube extends React.Component {
       if ('end' in this.props.opts.playerVars) {
         opts.endSeconds = this.props.opts.playerVars.end;
       }
-      if ('list' in _this.props.opts.playerVars) {
-        opts.list = _this.props.opts.playerVars.list;
+      if ('list' in this.props.opts.playerVars) {
+        opts.list = this.props.opts.playerVars.list;
       }
-      if ('listType' in _this.props.opts.playerVars) {
-        opts.listType = _this.props.opts.playerVars.listType;
+      if ('listType' in this.props.opts.playerVars) {
+        opts.listType = this.props.opts.playerVars.listType;
       }
     }
 
