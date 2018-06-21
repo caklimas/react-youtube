@@ -279,9 +279,10 @@ class YouTube extends React.Component {
     // set queueing options
     let autoplay = false;
     const opts = {
-      videoId: this.props.videoId,
+      videoId: this.props.videoId
     };
     if ('playerVars' in this.props.opts) {
+      opts.playerVars = {};
       autoplay = this.props.opts.playerVars.autoplay === 1;
       if ('start' in this.props.opts.playerVars) {
         opts.startSeconds = this.props.opts.playerVars.start;
@@ -290,10 +291,10 @@ class YouTube extends React.Component {
         opts.endSeconds = this.props.opts.playerVars.end;
       }
       if ('list' in this.props.opts.playerVars) {
-        opts.list = this.props.opts.playerVars.list;
+        opts.playerVars.list = this.props.opts.playerVars.list;
       }
       if ('listType' in this.props.opts.playerVars) {
-        opts.listType = this.props.opts.playerVars.listType;
+        opts.playerVars.listType = this.props.opts.playerVars.listType;
       }
     }
 
