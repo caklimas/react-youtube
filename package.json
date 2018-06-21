@@ -6,7 +6,7 @@
   "module": "es/YouTube.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:compedit/react-youtube.git"
+    "url": "git@github.com:caklimas/react-youtube.git"
   },
   "keywords": [
     "react",
@@ -17,9 +17,9 @@
   "author": "troy betz <troybetz@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/compedit/react-youtube/issues"
+    "url": "https://github.com/caklimas/react-youtube/issues"
   },
-  "homepage": "https://github.com/compedit/react-youtube",
+  "homepage": "https://github.com/caklimas/react-youtube",
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.3",
