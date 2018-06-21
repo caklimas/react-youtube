@@ -310,6 +310,7 @@ class YouTube extends React.Component {
     if (playlist) {
       const { list } = this.props.opts.playerVars;
       this.internalPlayer.cuePlaylist(list, 2);
+      return;
     }
 
     // default behaviour just cues the video
