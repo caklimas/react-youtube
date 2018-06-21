@@ -289,6 +289,12 @@ class YouTube extends React.Component {
       if ('end' in this.props.opts.playerVars) {
         opts.endSeconds = this.props.opts.playerVars.end;
       }
+      if ('list' in this.props.opts.playerVars) {
+        opts.list = this.props.opts.list;
+      }
+      if ('listType' in this.props.opts.playerVars) {
+        opts.listType = this.props.opts.listType;
+      }
     }
 
     // if autoplay is enabled loadVideoById
